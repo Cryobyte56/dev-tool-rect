@@ -1,18 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "./Navbar";
+import UnitConverter from "./UnitConverter";
 
 function App() {
-return (
-  <div className="p-10">
-    <h1 className="font-bold text-red-500 bg-yellow-300 border-4 border-black">
-      Hello, Tailwind!
-    </h1>
-    <h2 className="font-semibold text-green-500">Subheading</h2>
-    <p className="text-lg text-gray-700">This is a paragraph.</p>
-  </div>
-);
+  return (
+    <>
+      <Navbar />
+      <div className="grid grid-cols-4 gap-2 p-4 md:grid-cols-4">
+        {/* Unit Converter Component */}
+        <div className="col-span-1">
+          <UnitConverter />
+        </div>
+
+        {/* BMI Calculator */}
+        <div className="col-span-1">
+          <UnitConverter />
+        </div>
+
+        {/* Date Difference Calculator */}
+        <div className="col-span-2">
+          <UnitConverter />
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default App;

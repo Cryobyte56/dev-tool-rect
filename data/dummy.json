@@ -1,0 +1,64 @@
+{
+  "blog": [
+    {
+      "Id": 1,
+      "Author": "John Doe",
+      "Title": "The Future of AI",
+      "Description": "Exploring the impact of AI on society."
+    },
+    {
+      "Id": 2,
+      "Author": "Jane Smith",
+      "Title": "Mastering Laravel",
+      "Description": "Tips and tricks for Laravel development."
+    },
+    {
+      "Id": 3,
+      "Author": "Alex Johnson",
+      "Title": "Cloud Computing Trends",
+      "Description": "The latest trends in cloud technology."
+    },
+    {
+      "Id": 4,
+      "Author": "Emily Davis",
+      "Title": "UX Design Essentials",
+      "Description": "Fundamentals of great user experience."
+    },
+    {
+      "Id": 5,
+      "Author": "Michael Brown",
+      "Title": "Cybersecurity Best Practices",
+      "Description": "Protecting data from cyber threats."
+    },
+    {
+      "Id": 6,
+      "Author": "Sophia Wilson",
+      "Title": "The Power of Open Source",
+      "Description": "How open source is transforming tech."
+    },
+    {
+      "Id": 7,
+      "Author": "Daniel Martinez",
+      "Title": "Python for Data Science",
+      "Description": "Leveraging Python in data analysis."
+    },
+    {
+      "Id": 8,
+      "Author": "Olivia Taylor",
+      "Title": "Building Scalable Web Apps",
+      "Description": "Strategies for scalable architecture."
+    },
+    {
+      "Id": 9,
+      "Author": "William Anderson",
+      "Title": "Machine Learning Basics",
+      "Description": "Introduction to ML concepts."
+    },
+    {
+      "Id": 10,
+      "Author": "Emma Harris",
+      "Title": "SEO Strategies for 2025",
+      "Description": "Optimizing content for search engines."
+    }
+  ]
+}

@@ -15,12 +15,12 @@ function App() {
 
         {/* BMI Calculator */}
         <div className="col-span-1">
-          <UnitConverter />
+          
         </div>
 
         {/* Date Difference Calculator */}
         <div className="col-span-2">
-          <UnitConverter />
+        
         </div>
       </div>
     </>

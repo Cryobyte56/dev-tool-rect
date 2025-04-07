@@ -61,6 +61,7 @@ const DateDiff = () => {
         </div>
       </div>
 
+      {/* Trivia Side - Filler */}
       <div className="right grid gap-2 mt-5 sm:mt-0">
         <h3 className="text-white">Calendar Trivia</h3>
         <div>

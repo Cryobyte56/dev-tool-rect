@@ -17,55 +17,50 @@ const UnitConverter = () => {
   const [value, setValue] = useState(0);
   const [result, setResult] = useState(0);
 
-  const handleConvert = (val) => {
+  const handleConvert = (val, from, to, cat) => {
     setValue(val);
-    if (category === "temperature") {
+    if (cat === "temperature") {
       const celsius =
-        fromUnit === "fahrenheit"
+        from === "fahrenheit"
           ? ((val - 32) * 5) / 9
-          : fromUnit === "kelvin"
+          : from === "kelvin"
           ? val - 273.15
           : val;
       setResult(
-        toUnit === "celsius"
+        to === "celsius"
           ? celsius
-          : toUnit === "fahrenheit"
+          : to === "fahrenheit"
           ? (celsius * 9) / 5 + 32
           : celsius + 273.15
       );
     } else {
-      const baseValue = val / conversions[category][fromUnit];
-      setResult(baseValue * conversions[category][toUnit]);
+      const baseValue = val / conversions[cat][from];
+      setResult(baseValue * conversions[cat][to]);
     }
   };
 
   const handleFromUnitChange = (newFromUnit) => {
     setFromUnit(newFromUnit);
-    handleConvert(value, newFromUnit, toUnit);
+    handleConvert(value, newFromUnit, toUnit, category);
   };
 
   const handleToUnitChange = (newToUnit) => {
     setToUnit(newToUnit);
-    handleConvert(value, fromUnit, newToUnit);
+    handleConvert(value, fromUnit, newToUnit, category);
   };
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
     const defaultUnit = Object.keys(conversions[newCategory])[0];
+    const secondUnit = Object.keys(conversions[newCategory])[1] || defaultUnit;
     setFromUnit(defaultUnit);
-    setToUnit(Object.keys(conversions[newCategory])[1] || defaultUnit);
-    handleConvert(
-      value,
-      defaultUnit,
-      Object.keys(conversions[newCategory])[1] || defaultUnit
-    );
+    setToUnit(secondUnit);
+    handleConvert(value, defaultUnit, secondUnit, newCategory);
   };
 
   return (
-    <div className="bg-neutral-950 text-black border rounded-md border-neutral-700 p-5">
-      <h3 className="text-lg font-semibold text-pink-500 mb-2">
-        Unit Converter
-      </h3>
+    <div>
+      <h2 className="font-semibold text-pink-500 mb-2">Unit Converter</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mb-5">
         {/* Category Selection */}
@@ -86,10 +81,18 @@ const UnitConverter = () => {
         <div className="flex flex-col col-span-1 sm:col-span-2 gap-1">
           <p className="text-white">Value ({fromUnit || ""})</p>
           <input
+            type="number"
             value={value}
-            onChange={(e) => handleConvert(parseFloat(e.target.value) || 0)}
+            onChange={(e) =>
+              handleConvert(
+                parseFloat(e.target.value) || 0,
+                fromUnit,
+                toUnit,
+                category
+              )
+            }
             placeholder="Enter A Value"
-            className="w-full rounded-lg bg-gradient-to-tr from-cyan-200 to-fuchsia-200 text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
           />
         </div>
       </div>
@@ -129,9 +132,9 @@ const UnitConverter = () => {
       </div>
 
       {/* Result */}
-      <div className="flex flex-col gap-1 mt-5">
-        <p className="text-white font-medium text-xl">Result</p>
-        <span className="font-semibold text-xl text-white">
+      <div className="flex flex-col gap-1 mt-5 w-full rounded-lg bg-gradient-to-tr from-cyan-200 to-fuchsia-200 text-black p-1 border border-gray-300">
+        <p className="font-medium text-lg">Unit Converted Result</p>
+        <span className="text-md">
           = {!isNaN(result) ? result.toFixed(2) : "0.00"} {toUnit || ""}
         </span>
       </div>

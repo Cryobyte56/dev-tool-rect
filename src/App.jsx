@@ -4,10 +4,12 @@ import Navbar from "./Navbar";
 import UnitConverter from "./UnitConverter";
 import BMI from "./BMI";
 import DateDiff from "./DateDiff";
+import Welcome from "./Welcome";
 
 function App() {
   return (
     <>
+      <Welcome />
       <Navbar />
       <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-4 p-4">
         {/* Unit Converter Component */}

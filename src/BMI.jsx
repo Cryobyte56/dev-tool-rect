@@ -65,7 +65,7 @@ const BMI = () => {
 
       {/* Calculate Result */}
       <button
-        className="bmi-submit-btn mt-8 rounded-lg bg-lime-600 p-1 hover:bg-lime-700"
+        className="bmi-submit-btn mt-8 rounded-lg bg-lime-600 p-2 hover:bg-lime-700"
         onClick={calculateBMI}
       >
         Calculate

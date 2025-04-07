@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   background-color: #060606;
 }
 
@@ -30,3 +30,26 @@ h6 {
   font-size: 1rem !important;
   font-weight: 400 !important;
 }
+
+.right h5 {
+  color: #ffffff;
+}
+
+.right p{
+  color: #d6d6d6;
+}
+
+.react-datepicker.w-full {
+  width: 100% !important;
+}
+
+.react-datepicker__month-container {
+  width: 100% !important;
+}
+.react-datepicker__day,
+.react-datepicker__day-name,
+.react-datepicker__current-month {
+  font-size: 1rem;
+  width: 100%;
+}
+

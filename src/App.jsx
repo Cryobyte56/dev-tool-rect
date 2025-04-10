@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import UnitConverter from "./UnitConverter";
 import BMI from "./BMI";
 import DateDiff from "./DateDiff";
-import Bcrypt from "./bcrypt";
+import Bcrypt from "./Bcrypt_Gen";
 
 function App() {
   return (

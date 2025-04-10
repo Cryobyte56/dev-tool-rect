@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import UnitConverter from "./UnitConverter";
@@ -35,7 +34,6 @@ function App() {
             <Bcrypt />
           </div>
           <div className="col-span-1 sm:col-span-2 md:col-span-2 bg-neutral-950 text-white border rounded-md border-neutral-700 p-5 animate-fade-up">
-            {/* <TextCase /> */}
           </div>
         </div>
       </div>

@@ -30,18 +30,14 @@ const Bcrypt = () => {
 
   return (
     <div className="bcrypt-container flex flex-col">
-      <div className="top-bcrypt mb-2 flex">
-        <h2 className="font-bold text-yellow-400 w-4/6">
-          BCrypt Password Generator
-        </h2>
+      <h2 className="font-bold text-yellow-400 mb-5">BCrypt Password Generator</h2>
 
-        {/* Toast Notification */}
-        {showToast && (
-          <div className="flex justify-center items-center text-white text-sm rounded-lg shadow-lg animate-fade-in-out w-2/6">
-            <p className=" text-center align-middle">Copied to Clipboard!</p>
-          </div>
-        )}
-      </div>
+      {/* Toast Notification */}
+      {showToast && (
+        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-white text-black text-sm rounded-lg shadow-lg animate-fade-in-out px-4 py-2">
+          <p className="text-center">Copied to Clipboard!</p>
+        </div>
+      )}
 
       <div className="flex gap-2 mb-8">
         <input

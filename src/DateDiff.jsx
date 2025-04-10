@@ -30,7 +30,7 @@ const DateDiff = () => {
     <div className="flex-col gap-5 sm:flex sm:flex-row">
       <div className="left">
         <h2 className="font-bold mb-2 text-teal-400">
-          DATE DIFFERENCE CALCULATOR
+          Date Difference Calculator
         </h2>
 
         {/* Result */}

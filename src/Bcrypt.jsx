@@ -32,6 +32,7 @@ const Bcrypt = () => {
     <div className="bcrypt-container flex flex-col">
       <div className="top-bcrypt mb-2 flex justify-between">
         <h2 className="font-bold text-yellow-400">BCrypt Password Generator</h2>
+        
         {/* Toast Notification */}
         {showToast && (
           <div className="text-white rounded-lg shadow-lg animate-fade-in-out">

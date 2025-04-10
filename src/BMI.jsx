@@ -33,23 +33,33 @@ const BMI = () => {
       <div className="metrics flex flex-col gap-5">
         {/* Weight */}
         <div className="weight flex flex-col gap-1">
-          <label>Weight (kg): </label>
+          <label>Weight (kg):</label>
           <input
             className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-lime-400 focus:outline-none"
             type="number"
+            min="0"
             value={weight}
-            onChange={(e) => setWeight(e.target.value)}
+            onChange={(e) => {
+              const value = parseFloat(e.target.value);
+              if (value >= 0 || e.target.value === "")
+                setWeight(e.target.value);
+            }}
           />
         </div>
 
         {/* Height */}
         <div className="height flex flex-col gap-1">
-          <label>Height (cm): </label>
+          <label>Height (cm):</label>
           <input
             className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-lime-400 focus:outline-none"
             type="number"
+            min="0"
             value={height}
-            onChange={(e) => setHeight(e.target.value)}
+            onChange={(e) => {
+              const value = parseFloat(e.target.value);
+              if (value >= 0 || e.target.value === "")
+                setHeight(e.target.value);
+            }}
           />
         </div>
       </div>

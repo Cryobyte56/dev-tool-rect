@@ -35,18 +35,21 @@ const DateDiff = () => {
 
         {/* Result */}
         <div className="result">
-          <div className="flex flex-col gap-1 mt-5 w-full rounded-lg font-medium text-lg bg-gradient-to-tr from-teal-200 to-yellow-200 text-black p-2 border border-gray-300">
-            Result:{" "}
-            {difference !== null
-              ? `${difference} Day${difference !== 1 ? "s" : ""}`
-              : "No Dates Selected"}
+          <div className="flex flex-col gap-1 font-medium text-lg mt-5 w-full rounded-lg text-white bg-gradient-to-tr from-neutral-600 to-neutral-700 p-2 border border-neutral-500">
+            Result{" "}
+            {difference !== null ? (
+              <span className="font-normal text-neutral-300">{`${difference} Day${
+                difference !== 1 ? "s" : ""
+              }`}</span>
+            ) : (
+              <span className="font-normal text-neutral-300">
+                No Dates Selected
+              </span>
+            )}
           </div>
         </div>
 
         <div className="text-black text-lg w-full">
-          <label className="block text-base font-semibold mb-3">
-            Select Date Range
-          </label>
           <DatePicker
             selected={dates[0]}
             startDate={dates[0]}
@@ -56,7 +59,7 @@ const DateDiff = () => {
             inline
             calendarStartDay={1}
             dateFormat="yyyy/MM/dd"
-            calendarClassName="w-full"
+            calendarClassName="w-full mt-5"
           />
         </div>
       </div>

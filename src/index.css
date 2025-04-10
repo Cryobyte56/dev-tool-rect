@@ -36,7 +36,7 @@ h6 {
 }
 
 .right p{
-  color: #d6d6d6;
+  color: #9b9b9b;
 }
 
 .react-datepicker.w-full {
@@ -52,4 +52,19 @@ h6 {
   font-size: 1rem;
   width: 100%;
 }
+
+/* Toast in BCrypt */
+@layer utilities {
+  .animate-fade-in-out {
+    animation: fadeInOut 3s ease-in-out forwards;
+  }
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-10px); }
+  }
+}
+
 

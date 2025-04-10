@@ -56,8 +56,8 @@ const BMI = () => {
 
       {/* Result */}
       <div className="result">
-        <div className="flex flex-col gap-1 mt-5 w-full rounded-lg bg-gradient-to-tr from-lime-200 to-blue-200 text-black p-1 border border-gray-300">
-          <p className="font-medium text-lg">BMI Result</p>
+        <div className="flex flex-col gap-1 mt-5 w-full rounded-lg text-neutral-300 bg-gradient-to-tr from-neutral-600 to-neutral-700 p-2 border border-neutral-500">
+          <p className="font-medium text-lg text-white">BMI Result</p>
           <p className="text-md">Your BMI: {bmi}</p>
           <p className="text-md">Category: {category}</p>
         </div>
@@ -65,7 +65,7 @@ const BMI = () => {
 
       {/* Calculate Result */}
       <button
-        className="bmi-submit-btn mt-8 rounded-lg bg-lime-600 p-2 hover:bg-lime-700"
+        className="bmi-submit-btn mt-8 rounded-lg bg-white text-black font-medium p-2 hover:bg-neutral-200"
         onClick={calculateBMI}
       >
         Calculate

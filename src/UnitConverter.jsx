@@ -132,8 +132,8 @@ const UnitConverter = () => {
       </div>
 
       {/* Result */}
-      <div className="flex flex-col gap-1 mt-5 w-full rounded-lg bg-gradient-to-tr from-cyan-200 to-fuchsia-200 text-black p-1 border border-gray-300">
-        <p className="font-medium text-lg">Unit Converted Result</p>
+      <div className="flex flex-col gap-1 mt-5 w-full rounded-lg text-neutral-300 bg-gradient-to-tr from-neutral-600 to-neutral-700 p-2 border border-neutral-500">
+        <p className="font-medium text-lg text-white">Unit Converted Result</p>
         <span className="text-md">
           = {!isNaN(result) ? result.toFixed(2) : "0.00"} {toUnit || ""}
         </span>

@@ -35,7 +35,7 @@ h6 {
   color: #ffffff;
 }
 
-.right p{
+.right p {
   color: #9b9b9b;
 }
 
@@ -60,11 +60,17 @@ h6 {
   }
 
   @keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(-10px); }
-    10% { opacity: 1; transform: translateY(0); }
-    90% { opacity: 1; }
-    100% { opacity: 0; transform: translateY(-10px); }
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
-
-

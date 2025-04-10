@@ -63,6 +63,7 @@ const UnitConverter = () => {
       <h2 className="font-semibold text-pink-500 mb-2">Unit Converter</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 mb-5">
+
         {/* Category Selection */}
         <div className="flex flex-col col-span-1 sm:col-span-2 gap-1">
           <p className="text-white">Category</p>
@@ -98,6 +99,7 @@ const UnitConverter = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+        
         {/* Unit Selection - From */}
         <div className="flex flex-col col-span-1 sm:col-span-2 gap-1">
           <p className="text-white">From</p>

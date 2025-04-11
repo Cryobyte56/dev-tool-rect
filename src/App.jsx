@@ -1,10 +1,10 @@
 import "./App.css";
-import Navbar from "./Navbar";
-import UnitConverter from "./UnitConverter";
-import BMI from "./BMI";
-import DateDiff from "./DateDiff";
-import Bcrypt from "./Bcrypt_Gen";
-import TextCase from "./TextCase";
+import Navbar from "./components/Navbar";
+import UnitConverter from "./components/UnitConverter";
+import BMI from "./components/BMI";
+import DateDiff from "./components/DateDiff";
+import Bcrypt from "./components/Bcrypt_Gen";
+import TextCase from "./components/TextCase";
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <div className="parent flex flex-col">
         {/* Top Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-5 gap-4 p-4">
           {/* Unit Converter Component */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-1 bg-neutral-950 text-white border rounded-md border-neutral-700 p-5 animate-fade-up">
+          <div className="col-span-1 sm:col-span-2 md:col-span-2 bg-neutral-950 text-white border rounded-md border-neutral-700 p-5 animate-fade-up">
             <UnitConverter />
           </div>
 

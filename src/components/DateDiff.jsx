@@ -27,7 +27,7 @@ const DateDiff = () => {
   };
 
   return (
-    <div className="flex-col gap-5 sm:flex sm:flex-row">
+    <div className="flex-col gap-5 sm:flex sm:flex-row sm:justify-center">
       <div className="left">
         <h2 className="font-bold mb-2 text-teal-400">
           Date Difference Calculator
@@ -61,44 +61,6 @@ const DateDiff = () => {
             dateFormat="yyyy/MM/dd"
             calendarClassName="w-full mt-5"
           />
-        </div>
-      </div>
-
-      {/* Trivia Side - Filler */}
-      <div className="right grid gap-2 mt-5 sm:mt-0">
-        <h3 className="text-white">Calendar Trivia</h3>
-        <div>
-          <h5>The Missing Days</h5>
-          <p>
-            In 1582, 10 days were skipped to fix the calendar. October 4 was
-            followed by October 15!
-          </p>
-        </div>
-        <div>
-          <h5>Why 7 Days?</h5>
-          <p>
-            The 7-day week comes from ancient Babylon, based on the seven
-            celestial bodies they observed.
-          </p>
-        </div>
-        <div>
-          <h5>February's Oddity</h5>
-          <p>
-            February is the only month that can have no full moon during a
-            calendar year.
-          </p>
-        </div>
-        <div>
-          <h5>Year Zero Doesn't Exist</h5>
-          <p>
-            The Gregorian calendar jumps from 1 BC to AD 1, there is no year 0.
-          </p>
-        </div>
-        <div>
-          <h5>Longest Year Ever</h5>
-          <p>
-            45 BC was 445 days long thanks to Julius Caesar’s calendar reform.
-          </p>
         </div>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import bcrypt from "bcryptjs";
 import React, { useState, useEffect } from "react";
+import useToast from "../hooks/useToast";
+import Toast from "./Toast";
 
 const Bcrypt = () => {
   const [password, setPassword] = useState("");
   const [hash, setHash] = useState("");
-  const [showToast, setShowToast] = useState(false);
+  const { showToast, triggerToast } = useToast();
 
   // Toast
   useEffect(() => {
@@ -24,20 +26,18 @@ const Bcrypt = () => {
   const copyToClipboard = () => {
     if (hash) {
       navigator.clipboard.writeText(hash);
-      setShowToast(true);
+      triggerToast();
     }
   };
 
   return (
     <div className="bcrypt-container flex flex-col">
-      <h2 className="font-bold text-yellow-400 mb-5">BCrypt Password Generator</h2>
+      <h2 className="font-bold text-yellow-400 mb-5">
+        BCrypt Password Generator
+      </h2>
 
       {/* Toast Notification */}
-      {showToast && (
-        <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-white text-black text-sm rounded-lg shadow-lg animate-fade-in-out px-4 py-2">
-          <p className="text-center">Copied to Clipboard!</p>
-        </div>
-      )}
+      <Toast show={showToast} message="Copied to Clipboard!" />
 
       <div className="flex gap-2 mb-8">
         <input
@@ -45,7 +45,7 @@ const Bcrypt = () => {
           placeholder="Enter password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="p-2 border rounded-lg w-2/3 text-black focus:border-yellow-400 focus:outline-none"
+          className="p-2 border rounded-lg w-2/3 text-black bg-zinc-200 focus:border-yellow-400 focus:outline-none"
         />
         <button
           onClick={generateHash}

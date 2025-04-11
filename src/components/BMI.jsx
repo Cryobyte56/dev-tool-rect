@@ -35,7 +35,7 @@ const BMI = () => {
         <div className="weight flex flex-col gap-1">
           <label>Weight (kg):</label>
           <input
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-lime-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 bg-zinc-200 border border-gray-300 focus:border-lime-400 focus:outline-none"
             type="number"
             min="0"
             value={weight}
@@ -51,7 +51,7 @@ const BMI = () => {
         <div className="height flex flex-col gap-1">
           <label>Height (cm):</label>
           <input
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-lime-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 bg-zinc-200 border border-gray-300 focus:border-lime-400 focus:outline-none"
             type="number"
             min="0"
             value={height}
@@ -67,7 +67,7 @@ const BMI = () => {
       {/* Result */}
       <div className="result">
         <div className="flex flex-col gap-1 mt-5 w-full rounded-lg text-neutral-300 bg-gradient-to-tr from-neutral-600 to-neutral-700 p-2 border border-neutral-500">
-          <p className="font-medium text-lg text-white">BMI Result</p>
+          <p className="font-medium text-lg text-white">Result</p>
           <p className="text-md">Your BMI: {bmi}</p>
           <p className="text-md">Category: {category}</p>
         </div>
@@ -75,7 +75,7 @@ const BMI = () => {
 
       {/* Calculate Result */}
       <button
-        className="bmi-submit-btn mt-8 rounded-lg bg-white text-black font-medium p-2 hover:bg-neutral-200"
+        className="bmi-submit-btn mt-8 rounded-lg bg-white text-black font-medium p-2 hover:bg-zinc-200"
         onClick={calculateBMI}
       >
         Calculate

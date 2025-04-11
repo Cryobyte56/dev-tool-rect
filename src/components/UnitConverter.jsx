@@ -70,7 +70,7 @@ const UnitConverter = () => {
           <select
             value={category}
             onChange={(e) => handleCategoryChange(e.target.value)}
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 border bg-zinc-200 border-gray-300 focus:border-pink-400 focus:outline-none"
           >
             <option value="length">Length</option>
             <option value="weight">Weight</option>
@@ -92,8 +92,8 @@ const UnitConverter = () => {
                 category
               )
             }
-            placeholder="Enter A Value"
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
+            placeholder="Enter A Value" 
+            className="w-full rounded-lg text-black p-1 border bg-zinc-200 border-gray-300 focus:border-pink-400 focus:outline-none"
           />
         </div>
       </div>
@@ -106,7 +106,7 @@ const UnitConverter = () => {
           <select
             value={fromUnit}
             onChange={(e) => handleFromUnitChange(e.target.value)}
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 border bg-zinc-200 border-gray-300 focus:border-pink-400 focus:outline-none"
           >
             {Object.keys(conversions[category]).map((unit) => (
               <option key={unit} value={unit}>
@@ -122,7 +122,7 @@ const UnitConverter = () => {
           <select
             value={toUnit}
             onChange={(e) => handleToUnitChange(e.target.value)}
-            className="w-full rounded-lg text-black p-1 border border-gray-300 focus:border-pink-400 focus:outline-none"
+            className="w-full rounded-lg text-black p-1 border bg-zinc-200 border-gray-300 focus:border-pink-400 focus:outline-none"
           >
             {Object.keys(conversions[category]).map((unit) => (
               <option key={unit} value={unit}>
@@ -135,7 +135,7 @@ const UnitConverter = () => {
 
       {/* Result */}
       <div className="flex flex-col gap-1 mt-5 w-full rounded-lg text-neutral-300 bg-gradient-to-tr from-neutral-600 to-neutral-700 p-2 border border-neutral-500">
-        <p className="font-medium text-lg text-white">Unit Converted Result</p>
+        <p className="font-medium text-lg text-white">Result</p>
         <span className="text-md">
           = {!isNaN(result) ? result.toFixed(2) : "0.00"} {toUnit || ""}
         </span>

@@ -74,3 +74,8 @@ h6 {
     }
   }
 }
+
+/* Text Case Converter */
+.text-area{
+  resize: none;
+}

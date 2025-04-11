@@ -8,14 +8,6 @@ const Bcrypt = () => {
   const [hash, setHash] = useState("");
   const { showToast, triggerToast } = useToast();
 
-  // Toast
-  useEffect(() => {
-    if (showToast) {
-      const timer = setTimeout(() => setShowToast(false), 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [showToast]);
-
   const generateHash = async () => {
     if (!password) return;
     const salt = await bcrypt.genSalt(10);

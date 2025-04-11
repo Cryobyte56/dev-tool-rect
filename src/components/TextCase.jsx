@@ -49,7 +49,7 @@ const TextCase = () => {
 
       {/* Text Area */}
       <textarea
-        className="text-area w-full rounded-lg text-black p-1 border bg-zinc-200 border-gray-300 focus:border-red-400 focus:outline-none"
+        className="text-area w-full rounded-lg text-black p-1 mb-2 border bg-zinc-200 border-gray-300 focus:border-red-400 focus:outline-none"
         id="text-area"
         placeholder="Type your text here..."
         value={text}

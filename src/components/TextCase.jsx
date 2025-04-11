@@ -57,7 +57,7 @@ const TextCase = () => {
       ></textarea>
 
       {/* Buttons */}
-      <div className="buttons flex flex-wrap gap-2">
+      <div className="buttons flex flex-wrap gap-2 justify-center sm:justify-normal">
         <button
           onClick={() => handleConvert("upper")}
           className="bg-white text-black rounded-lg p-2 text-sm font-medium hover:bg-neutral-200"
@@ -84,7 +84,7 @@ const TextCase = () => {
         </button>
         <button
           onClick={handleCopy}
-          className="w-full sm:w-1/3 font-medium bg-red-400 text-black px-4 py-2 rounded-lg hover:bg-red-500 transition flex items-center justify-center gap-2"
+          className="w-full sm:w-1/3 font-medium bg-red-400 text-black px-4 py-2 rounded-lg hover:bg-red-500 transition flex items-center justify-center gap-2 mt-5 sm:mt-0"
         >
           Copy to Clipboard
           <svg
